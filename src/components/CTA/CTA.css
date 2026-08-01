@@ -1,0 +1,146 @@
+.cta {
+  background: #0b1120;
+  padding: 10px 5%;
+}
+
+.cta-content {
+  background: linear-gradient(90deg, #7b63a2 0%, #6d28d9 100%);
+  border-radius: 18px;
+  padding: 10px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 280px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* دوائر خفيفة بالخلفية */
+.cta-content::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  right: -180px;
+  top: -180px;
+}
+
+.cta-content::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  left: -80px;
+  bottom: -120px;
+}
+
+.cta-text {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.cta-text h2 {
+  color: #fff;
+  font-size: 38px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.cta-text p {
+  color: #e8e8e8;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background: #9d5cff;
+  color: #fff;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #ffffff;
+  color: #6d28d9;
+  transform: translateY(-3px);
+}
+
+.cta-image {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-image img {
+  width: 420px;
+  max-width: 100%;
+  display: block;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .cta-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 35px;
+    padding: 40px 30px;
+  }
+
+  .cta-text {
+    max-width: 100%;
+  }
+
+  .cta-btn {
+    margin: auto;
+  }
+
+  .cta-image img {
+    width: 300px;
+  }
+
+  .cta-text h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta {
+    padding: 60px 20px;
+  }
+
+  .cta-content {
+    padding: 30px 20px;
+  }
+
+  .cta-text h2 {
+    font-size: 26px;
+  }
+
+  .cta-text p {
+    font-size: 15px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-image img {
+    width: 240px;
+  }
+}
